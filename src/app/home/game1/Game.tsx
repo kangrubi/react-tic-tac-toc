@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Board from "./Board";
-import { Square } from "./types";
+import { Square } from "../../types/types";
 
 const Game = () => {
   const [history, setHistory] = useState<Square[][]>([Array(9).fill(null)]); // 이중배열

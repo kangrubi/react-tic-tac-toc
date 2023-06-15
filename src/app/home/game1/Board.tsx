@@ -1,6 +1,6 @@
 import React from "react";
 import Square from "./Square";
-import { Square as SquareType } from "./types";
+import { Square as SquareType } from "../../types/types";
 
 interface Props {
   xIsNext: boolean;
