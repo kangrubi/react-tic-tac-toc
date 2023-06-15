@@ -5,7 +5,7 @@ import { Square } from "./types";
 const Game = () => {
   const [history, setHistory] = useState<Square[][]>([Array(9).fill(null)]); // 이중배열
   const [currentMove, setCurrentMove] = useState<number>(0);
-  const xIsNext = currentMove % 2 === 0;
+  const xIsNext = currentMove % 2 === 0; // 짝수 인지
   const currentSquares = history[currentMove];
   // 배열의 마지막꺼만 나오게 (최신)
 
@@ -17,7 +17,7 @@ const Game = () => {
     // [1, 2, 3].push(1); // [1,2,3,1]
 
     // [...[[1], [2], [3]], [1]]; // [[1],[2],[3],[1]]
-    console.log(history);
+    console.log([...history.slice(0, currentMove + 1)]);
   };
 
   const jumpTo = (nextMove: number) => {
